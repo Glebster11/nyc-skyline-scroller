@@ -1,29 +1,29 @@
 const starterPhotos = [
-  { src: "assets/aligned-photos/DSCF7994.jpg", title: "Skyline Study 01" },
-  { src: "assets/aligned-photos/DSCF8006.jpg", title: "Skyline Study 02" },
-  { src: "assets/aligned-photos/DSCF8013.jpg", title: "Skyline Study 03" },
-  { src: "assets/aligned-photos/DSCF8061.jpg", title: "Skyline Study 04" },
-  { src: "assets/aligned-photos/DSCF8189.jpg", title: "Skyline Study 05" },
-  { src: "assets/aligned-photos/DSCF8201.jpg", title: "Skyline Study 06" },
-  { src: "assets/aligned-photos/DSCF8221.jpg", title: "Skyline Study 07" },
-  { src: "assets/aligned-photos/DSCF8250.jpg", title: "Skyline Study 08" },
-  { src: "assets/aligned-photos/DSCF8278.jpg", title: "Skyline Study 09" },
-  { src: "assets/aligned-photos/DSCF8319.jpg", title: "Skyline Study 10" },
-  { src: "assets/aligned-photos/DSCF8484.jpg", title: "Skyline Study 11" },
-  { src: "assets/aligned-photos/DSCF8487.jpg", title: "Skyline Study 12" },
-  { src: "assets/aligned-photos/DSCF8579.jpg", title: "Skyline Study 13" },
-  { src: "assets/aligned-photos/DSCF8597.jpg", title: "Skyline Study 14" },
-  { src: "assets/aligned-photos/DSCF8671.jpg", title: "Skyline Study 15" },
-  { src: "assets/aligned-photos/DSCF8695.jpg", title: "Skyline Study 16" },
-  { src: "assets/aligned-photos/DSCF8703.jpg", title: "Skyline Study 17" },
-  { src: "assets/aligned-photos/DSCF8738.jpg", title: "Skyline Study 18" },
-  { src: "assets/aligned-photos/DSCF8752.jpg", title: "Skyline Study 19" },
-  { src: "assets/aligned-photos/DSCF8762.jpg", title: "Skyline Study 20" },
-  { src: "assets/aligned-photos/DSCF8768.jpg", title: "Skyline Study 21" },
-  { src: "assets/aligned-photos/DSCF8776.jpg", title: "Skyline Study 22" },
-  { src: "assets/aligned-photos/DSCF8783.jpg", title: "Skyline Study 23" },
-  { src: "assets/aligned-photos/DSCF8785.jpg", title: "Skyline Study 24" },
-  { src: "assets/aligned-photos/DSCF8786.jpg", title: "Skyline Study 25" }
+  { src: "assets/aligned-photos/DSCF7994.jpg", date: "Nov 26, 2025", time: "4:07 PM", iso: "ISO 250", aperture: "f/3.6", shutter: "1/640s" },
+  { src: "assets/aligned-photos/DSCF8006.jpg", date: "Dec 3, 2025", time: "3:41 PM", iso: "ISO 250", aperture: "f/4.5", shutter: "1/850s" },
+  { src: "assets/aligned-photos/DSCF8013.jpg", date: "Dec 4, 2025", time: "4:20 PM", iso: "ISO 250", aperture: "f/2.8", shutter: "1/340s" },
+  { src: "assets/aligned-photos/DSCF8061.jpg", date: "Dec 10, 2025", time: "4:13 PM", iso: "ISO 125", aperture: "f/2.2", shutter: "1/75s" },
+  { src: "assets/aligned-photos/DSCF8189.jpg", date: "Jan 7, 2026", time: "4:42 PM", iso: "ISO 400", aperture: "f/2", shutter: "1/200s" },
+  { src: "assets/aligned-photos/DSCF8201.jpg", date: "Jan 13, 2026", time: "4:40 PM", iso: "ISO 250", aperture: "f/2.5", shutter: "1/280s" },
+  { src: "assets/aligned-photos/DSCF8221.jpg", date: "Jan 17, 2026", time: "2:25 PM", iso: "ISO 125", aperture: "f/3.2", shutter: "1/420s" },
+  { src: "assets/aligned-photos/DSCF8250.jpg", date: "Jan 25, 2026", time: "5:05 PM", iso: "ISO 500", aperture: "f/2.5", shutter: "1/90s" },
+  { src: "assets/aligned-photos/DSCF8278.jpg", date: "Jan 27, 2026", time: "5:27 PM", iso: "ISO 1250", aperture: "f/2", shutter: "1/200s" },
+  { src: "assets/aligned-photos/DSCF8319.jpg", date: "Feb 1, 2026", time: "5:27 PM", iso: "ISO 640", aperture: "f/2", shutter: "1/200s" },
+  { src: "assets/aligned-photos/DSCF8484.jpg", date: "Feb 23, 2026", time: "11:19 AM", iso: "ISO 125", aperture: "f/3.6", shutter: "1/600s" },
+  { src: "assets/aligned-photos/DSCF8487.jpg", date: "Feb 23, 2026", time: "3:42 PM", iso: "ISO 125", aperture: "f/3.6", shutter: "1/750s" },
+  { src: "assets/aligned-photos/DSCF8579.jpg", date: "Feb 24, 2026", time: "8:18 AM", iso: "ISO 250", aperture: "f/4.5", shutter: "1/1100s" },
+  { src: "assets/aligned-photos/DSCF8597.jpg", date: "Feb 28, 2026", time: "9:06 AM", iso: "ISO 250", aperture: "f/5", shutter: "1/1250s" },
+  { src: "assets/aligned-photos/DSCF8671.jpg", date: "Mar 8, 2026", time: "5:40 PM", iso: "ISO 500", aperture: "f/3.2", shutter: "1/420s" },
+  { src: "assets/aligned-photos/DSCF8695.jpg", date: "Mar 8, 2026", time: "6:01 PM", iso: "ISO 640", aperture: "f/2", shutter: "1/200s" },
+  { src: "assets/aligned-photos/DSCF8703.jpg", date: "Mar 12, 2026", time: "7:23 AM", iso: "ISO 250", aperture: "f/2.2", shutter: "1/240s" },
+  { src: "assets/aligned-photos/DSCF8738.jpg", date: "Mar 16, 2026", time: "6:11 PM", iso: "ISO 500", aperture: "f/2.5", shutter: "1/340s" },
+  { src: "assets/aligned-photos/DSCF8752.jpg", date: "Mar 27, 2026", time: "7:13 PM", iso: "ISO 500", aperture: "f/2.2", shutter: "1/200s" },
+  { src: "assets/aligned-photos/DSCF8762.jpg", date: "Apr 1, 2026", time: "8:52 AM", iso: "ISO 500", aperture: "f/6.4", shutter: "1/1500s" },
+  { src: "assets/aligned-photos/DSCF8768.jpg", date: "Apr 1, 2026", time: "4:09 PM", iso: "ISO 500", aperture: "f/5", shutter: "1/1000s" },
+  { src: "assets/aligned-photos/DSCF8776.jpg", date: "Apr 5, 2026", time: "12:10 PM", iso: "ISO 500", aperture: "f/4", shutter: "1/750s" },
+  { src: "assets/aligned-photos/DSCF8783.jpg", date: "Apr 5, 2026", time: "7:08 PM", iso: "ISO 500", aperture: "f/4", shutter: "1/750s" },
+  { src: "assets/aligned-photos/DSCF8785.jpg", date: "Apr 5, 2026", time: "7:28 PM", iso: "ISO 1250", aperture: "f/2", shutter: "1/200s" },
+  { src: "assets/aligned-photos/DSCF8786.jpg", date: "Apr 9, 2026", time: "10:06 PM", iso: "ISO 6400", aperture: "f/2", shutter: "1/80s" }
 ];
 
 const track = document.querySelector("#photo-track");
@@ -47,15 +47,18 @@ function renderGallery() {
   photos.forEach((photo, index) => {
     const slide = document.createElement("article");
     slide.className = "slide";
-    slide.setAttribute("aria-label", photo.title);
+    slide.setAttribute("aria-label", `NYC skyline on ${photo.date} at ${photo.time}`);
 
     const image = document.createElement("img");
     image.src = photo.src;
-    image.alt = photo.title;
+    image.alt = `NYC skyline on ${photo.date} at ${photo.time}`;
 
     const caption = document.createElement("p");
     caption.className = "slide-caption";
-    caption.textContent = `${String(index + 1).padStart(2, "0")} / ${String(photos.length).padStart(2, "0")} - ${photo.title}`;
+    caption.innerHTML = `
+      <span class="caption-primary">${photo.date} · ${photo.time}</span>
+      <span class="caption-settings">${photo.iso} · ${photo.aperture} · ${photo.shutter}</span>
+    `;
 
     slide.append(image, caption);
     track.append(slide);
@@ -63,7 +66,7 @@ function renderGallery() {
     const dot = document.createElement("button");
     dot.className = "dot";
     dot.type = "button";
-    dot.setAttribute("aria-label", `Show ${photo.title}`);
+    dot.setAttribute("aria-label", `Show ${photo.date} at ${photo.time}`);
     dot.addEventListener("click", () => goToSlide(index));
     dots.append(dot);
   });

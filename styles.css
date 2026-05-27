@@ -150,8 +150,27 @@ h1 {
   z-index: 1;
   margin: 0;
   color: rgba(255, 255, 255, 0.84);
+  display: grid;
+  gap: 4px;
   font-size: 0.9rem;
   font-weight: 600;
+}
+
+.caption-primary,
+.caption-settings {
+  display: block;
+}
+
+.caption-primary {
+  color: rgba(255, 255, 255, 0.94);
+  font-size: 0.95rem;
+}
+
+.caption-settings {
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .nav-button {
