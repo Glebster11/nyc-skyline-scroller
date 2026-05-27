@@ -31,8 +31,6 @@ const dots = document.querySelector("#dots");
 const playToggle = document.querySelector("#play-toggle");
 const speedSlider = document.querySelector("#speed-slider");
 const speedValue = document.querySelector("#speed-value");
-const previousButton = document.querySelector(".nav-button--previous");
-const nextButton = document.querySelector(".nav-button--next");
 const colorCanvas = document.createElement("canvas");
 const colorContext = colorCanvas.getContext("2d", { willReadFrequently: true });
 
@@ -199,16 +197,6 @@ function updateSpeed() {
     startAutoplay();
   }
 }
-
-previousButton.addEventListener("click", () => {
-  goPrevious();
-  syncAutoplay();
-});
-
-nextButton.addEventListener("click", () => {
-  goNext();
-  syncAutoplay();
-});
 
 playToggle.addEventListener("click", () => {
   isPlaying = !isPlaying;

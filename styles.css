@@ -190,35 +190,6 @@ h1 {
   text-transform: uppercase;
 }
 
-.nav-button {
-  position: absolute;
-  z-index: 3;
-  top: 50%;
-  width: 46px;
-  height: 62px;
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  border-radius: 8px;
-  color: var(--text);
-  background: rgba(0, 0, 0, 0.5);
-  transform: translateY(-50%);
-  cursor: pointer;
-  font-size: 2rem;
-  line-height: 1;
-  backdrop-filter: blur(12px);
-}
-
-.nav-button:hover {
-  background: rgba(0, 0, 0, 0.72);
-}
-
-.nav-button--previous {
-  left: 14px;
-}
-
-.nav-button--next {
-  right: 14px;
-}
-
 .controls {
   display: flex;
   gap: 18px;
@@ -326,19 +297,6 @@ h1 {
 
   .caption-settings {
     font-size: 0.68rem;
-  }
-
-  .nav-button {
-    width: 36px;
-    height: 50px;
-  }
-
-  .nav-button--previous {
-    left: 8px;
-  }
-
-  .nav-button--next {
-    right: 8px;
   }
 
   .controls {
