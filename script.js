@@ -1,5 +1,6 @@
 const starterPhotos = [
   { src: "assets/aligned-photos/DSCF7994.jpg", date: "Nov 26, 2025", time: "4:07 PM", temp: "59°F", iso: "ISO 250", aperture: "f/3.6", shutter: "1/640s" },
+  { src: "assets/aligned-photos/DSCF8005.jpg", date: "Dec 2, 2025", time: "5:10 PM", temp: "37°F", iso: "ISO 6400", aperture: "f/2", shutter: "1/180s" },
   { src: "assets/aligned-photos/DSCF8006.jpg", date: "Dec 3, 2025", time: "3:41 PM", temp: "40°F", iso: "ISO 250", aperture: "f/4.5", shutter: "1/850s" },
   { src: "assets/aligned-photos/DSCF8013.jpg", date: "Dec 4, 2025", time: "4:20 PM", temp: "40°F", iso: "ISO 250", aperture: "f/2.8", shutter: "1/340s" },
   { src: "assets/aligned-photos/DSCF8061.jpg", date: "Dec 10, 2025", time: "4:13 PM", temp: "44°F", iso: "ISO 125", aperture: "f/2.2", shutter: "1/75s" },
@@ -9,6 +10,7 @@ const starterPhotos = [
   { src: "assets/aligned-photos/DSCF8250.jpg", date: "Jan 25, 2026", time: "5:05 PM", temp: "16°F", iso: "ISO 500", aperture: "f/2.5", shutter: "1/90s" },
   { src: "assets/aligned-photos/DSCF8278.jpg", date: "Jan 27, 2026", time: "5:27 PM", temp: "17°F", iso: "ISO 1250", aperture: "f/2", shutter: "1/200s" },
   { src: "assets/aligned-photos/DSCF8319.jpg", date: "Feb 1, 2026", time: "5:27 PM", temp: "20°F", iso: "ISO 640", aperture: "f/2", shutter: "1/200s" },
+  { src: "assets/aligned-photos/DSCF8324.jpg", date: "Feb 1, 2026", time: "5:37 PM", temp: "19°F", iso: "ISO 4000", aperture: "f/2", shutter: "1/200s" },
   { src: "assets/aligned-photos/DSCF8484.jpg", date: "Feb 23, 2026", time: "11:19 AM", temp: "30°F", iso: "ISO 125", aperture: "f/3.6", shutter: "1/600s" },
   { src: "assets/aligned-photos/DSCF8487.jpg", date: "Feb 23, 2026", time: "3:42 PM", temp: "35°F", iso: "ISO 125", aperture: "f/3.6", shutter: "1/750s" },
   { src: "assets/aligned-photos/DSCF8579.jpg", date: "Feb 24, 2026", time: "8:18 AM", temp: "24°F", iso: "ISO 250", aperture: "f/4.5", shutter: "1/1100s" },
