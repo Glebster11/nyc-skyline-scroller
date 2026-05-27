@@ -1,6 +1,5 @@
 const starterPhotos = [
   { src: "assets/aligned-photos/DSCF7994.jpg", date: "Nov 26, 2025", time: "4:07 PM", temp: "59°F", iso: "ISO 250", aperture: "f/3.6", shutter: "1/640s" },
-  { src: "assets/aligned-photos/DSCF8005.jpg", date: "Dec 2, 2025", time: "5:10 PM", temp: "37°F", iso: "ISO 6400", aperture: "f/2", shutter: "1/180s" },
   { src: "assets/aligned-photos/DSCF8006.jpg", date: "Dec 3, 2025", time: "3:41 PM", temp: "40°F", iso: "ISO 250", aperture: "f/4.5", shutter: "1/850s" },
   { src: "assets/aligned-photos/DSCF8013.jpg", date: "Dec 4, 2025", time: "4:20 PM", temp: "40°F", iso: "ISO 250", aperture: "f/2.8", shutter: "1/340s" },
   { src: "assets/aligned-photos/DSCF8061.jpg", date: "Dec 10, 2025", time: "4:13 PM", temp: "44°F", iso: "ISO 125", aperture: "f/2.2", shutter: "1/75s" },
