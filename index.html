@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NYC Skyline Study</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="site-shell">
+      <section class="hero" aria-labelledby="page-title">
+        <div class="hero-copy">
+          <p class="eyebrow">New York City skyline archive</p>
+          <h1 id="page-title">One view, many moods.</h1>
+          <p class="intro">
+            A simple local gallery for studying the same skyline through changing light,
+            weather, seasons, and time.
+          </p>
+        </div>
+
+        <div class="upload-panel">
+          <label class="upload-button" for="photo-input">Choose photos</label>
+          <input id="photo-input" type="file" accept="image/*" multiple>
+          <p id="photo-count">Showing the starter set. Add your own skyline photos anytime.</p>
+        </div>
+      </section>
+
+      <section class="gallery-stage" aria-label="NYC skyline photo sequence">
+        <button class="nav-button nav-button--previous" type="button" aria-label="Previous photo">
+          &#8249;
+        </button>
+
+        <div class="viewport">
+          <div id="photo-track" class="photo-track"></div>
+        </div>
+
+        <button class="nav-button nav-button--next" type="button" aria-label="Next photo">
+          &#8250;
+        </button>
+      </section>
+
+      <section class="controls" aria-label="Gallery controls">
+        <div class="playback-controls">
+          <button id="play-toggle" class="control-button" type="button">Pause</button>
+          <label class="speed-control" for="speed-slider">
+            <span>Speed</span>
+            <input id="speed-slider" type="range" min="1.5" max="10" step="0.1" value="3.6">
+            <output id="speed-value" for="speed-slider">3.6s</output>
+          </label>
+        </div>
+        <div id="dots" class="dots" aria-label="Photo navigation"></div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
