@@ -30,8 +30,6 @@ const starterPhotos = [
 
 const track = document.querySelector("#photo-track");
 const dots = document.querySelector("#dots");
-const photoInput = document.querySelector("#photo-input");
-const photoCount = document.querySelector("#photo-count");
 const playToggle = document.querySelector("#play-toggle");
 const speedSlider = document.querySelector("#speed-slider");
 const speedValue = document.querySelector("#speed-value");
@@ -73,12 +71,6 @@ function renderGallery() {
   });
 
   goToSlide(0);
-  updatePhotoCount();
-}
-
-function updatePhotoCount() {
-  const label = photos.length === 1 ? "photo" : "photos";
-  photoCount.textContent = `Showing ${photos.length} ${label} in a 2:3 portrait frame. Choose files to preview a different sequence.`;
 }
 
 function goToSlide(index) {
@@ -129,22 +121,6 @@ function updateSpeed() {
     startAutoplay();
   }
 }
-
-photoInput.addEventListener("change", (event) => {
-  const files = [...event.target.files].filter((file) => file.type.startsWith("image/"));
-
-  if (!files.length) {
-    return;
-  }
-
-  photos = files.map((file, index) => ({
-    src: URL.createObjectURL(file),
-    title: file.name.replace(/\.[^/.]+$/, "") || `Uploaded Skyline ${index + 1}`
-  }));
-
-  renderGallery();
-  syncAutoplay();
-});
 
 previousButton.addEventListener("click", () => {
   goPrevious();

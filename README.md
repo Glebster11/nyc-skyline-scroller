@@ -14,8 +14,6 @@ code /Users/glebgladki/Documents/Codex/nyc-skyline-scroller
 
 ## Add Your Photos
 
-Use the **Choose photos** button on the page to preview your own images instantly.
-
 For the version you will publish to GitHub/Vercel, copy images into:
 
 ```text
