@@ -8,6 +8,8 @@
   --accent: #f3c969;
   --accent-strong: #ffdc73;
   --shadow: 0 24px 70px rgba(0, 0, 0, 0.45);
+  --photo-rgb: 83 122 147;
+  --photo-deep-rgb: 7 8 10;
 }
 
 * {
@@ -20,8 +22,22 @@ body {
   font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   color: var(--text);
   background:
-    radial-gradient(circle at top left, rgba(83, 122, 147, 0.2), transparent 34rem),
-    linear-gradient(140deg, #07080a 0%, #141312 48%, #071013 100%);
+    radial-gradient(circle at 50% 18%, rgb(var(--photo-rgb) / 0.34), transparent 30rem),
+    radial-gradient(circle at 16% 8%, rgb(var(--photo-rgb) / 0.22), transparent 28rem),
+    linear-gradient(140deg, rgb(var(--photo-deep-rgb)) 0%, #141312 52%, #071013 100%);
+  transition: background 1200ms ease;
+}
+
+body::before {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  content: "";
+  background:
+    linear-gradient(rgb(0 0 0 / 0.16), rgb(0 0 0 / 0.64)),
+    rgb(var(--photo-rgb) / 0.08);
+  pointer-events: none;
+  transition: background 1200ms ease;
 }
 
 button,
@@ -105,6 +121,7 @@ h1 {
   border-radius: 8px;
   background: #0f1216;
   box-shadow: var(--shadow);
+  transition: box-shadow 1200ms ease, border-color 1200ms ease;
 }
 
 .photo-track {
@@ -266,8 +283,10 @@ h1 {
 
 @media (max-width: 760px) {
   .site-shell {
-    width: min(100% - 22px, 1180px);
-    padding: 20px 0;
+    width: min(100% - 18px, 1180px);
+    min-height: 100svh;
+    padding: 12px 0 14px;
+    gap: 10px;
   }
 
   .hero {
@@ -275,30 +294,64 @@ h1 {
     align-items: start;
   }
 
+  .eyebrow {
+    margin-bottom: 6px;
+    font-size: 0.62rem;
+  }
+
   h1 {
-    font-size: clamp(2.8rem, 17vw, 5rem);
+    font-size: clamp(2rem, 11vw, 3.4rem);
+    line-height: 0.96;
   }
 
   .viewport {
-    width: min(100%, calc((100vh - 330px) * 0.6667));
-    max-height: calc(100vh - 330px);
+    width: min(100%, calc((100svh - 178px) * 0.6667));
+    max-height: calc(100svh - 178px);
     min-width: 220px;
+    border-color: rgb(var(--photo-rgb) / 0.38);
+    box-shadow:
+      0 18px 62px rgb(0 0 0 / 0.58),
+      0 0 90px rgb(var(--photo-rgb) / 0.22);
+  }
+
+  .slide-caption {
+    left: 14px;
+    right: 14px;
+    bottom: 14px;
+  }
+
+  .caption-primary {
+    font-size: 0.84rem;
+  }
+
+  .caption-settings {
+    font-size: 0.68rem;
   }
 
   .nav-button {
-    width: 40px;
-    height: 54px;
+    width: 36px;
+    height: 50px;
+  }
+
+  .nav-button--previous {
+    left: 8px;
+  }
+
+  .nav-button--next {
+    right: 8px;
   }
 
   .controls {
+    gap: 10px;
     align-items: flex-start;
     flex-direction: column;
   }
 
   .playback-controls {
     width: 100%;
-    align-items: flex-start;
-    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    flex-direction: row;
   }
 
   .speed-control {
@@ -309,5 +362,17 @@ h1 {
 
   .dots {
     justify-content: flex-start;
+    gap: 7px;
+    max-height: 42px;
+    overflow: hidden;
+  }
+
+  .dot {
+    width: 8px;
+    height: 8px;
+  }
+
+  .dot[aria-current="true"] {
+    width: 24px;
   }
 }

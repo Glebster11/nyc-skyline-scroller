@@ -33,6 +33,8 @@ const speedSlider = document.querySelector("#speed-slider");
 const speedValue = document.querySelector("#speed-value");
 const previousButton = document.querySelector(".nav-button--previous");
 const nextButton = document.querySelector(".nav-button--next");
+const colorCanvas = document.createElement("canvas");
+const colorContext = colorCanvas.getContext("2d", { willReadFrequently: true });
 
 let photos = [...starterPhotos];
 let currentIndex = 0;
@@ -52,6 +54,11 @@ function renderGallery() {
     const image = document.createElement("img");
     image.src = photo.src;
     image.alt = `NYC skyline on ${photo.date} at ${photo.time}`;
+    image.addEventListener("load", () => {
+      if (index === currentIndex) {
+        updateBackgroundFromImage(image);
+      }
+    });
 
     const caption = document.createElement("p");
     caption.className = "slide-caption";
@@ -85,6 +92,76 @@ function goToSlide(index) {
   [...dots.children].forEach((dot, dotIndex) => {
     dot.setAttribute("aria-current", String(dotIndex === currentIndex));
   });
+
+  const activeImage = track.children[currentIndex]?.querySelector("img");
+  if (activeImage?.complete) {
+    updateBackgroundFromImage(activeImage);
+  }
+}
+
+function updateBackgroundFromImage(image) {
+  if (!colorContext) {
+    return;
+  }
+
+  const sampleSize = 28;
+  colorCanvas.width = sampleSize;
+  colorCanvas.height = sampleSize;
+  let pixels;
+
+  try {
+    colorContext.drawImage(image, 0, 0, sampleSize, sampleSize);
+    pixels = colorContext.getImageData(0, 0, sampleSize, sampleSize).data;
+  } catch {
+    return;
+  }
+
+  let red = 0;
+  let green = 0;
+  let blue = 0;
+  let samples = 0;
+
+  for (let y = 5; y < sampleSize - 5; y += 1) {
+    for (let x = 5; x < sampleSize - 5; x += 1) {
+      const index = (y * sampleSize + x) * 4;
+      red += pixels[index];
+      green += pixels[index + 1];
+      blue += pixels[index + 2];
+      samples += 1;
+    }
+  }
+
+  const color = balanceBackgroundColor({
+    red: Math.round(red / samples),
+    green: Math.round(green / samples),
+    blue: Math.round(blue / samples)
+  });
+
+  document.documentElement.style.setProperty("--photo-rgb", `${color.red} ${color.green} ${color.blue}`);
+  document.documentElement.style.setProperty("--photo-deep-rgb", `${color.deepRed} ${color.deepGreen} ${color.deepBlue}`);
+}
+
+function balanceBackgroundColor({ red, green, blue }) {
+  const saturationBoost = 1.18;
+  const darken = 0.58;
+  const maxChannel = Math.max(red, green, blue);
+  const minChannel = Math.min(red, green, blue);
+  const range = maxChannel - minChannel;
+  const average = (red + green + blue) / 3;
+
+  const boosted = [red, green, blue].map((channel) => {
+    const saturated = average + (channel - average) * saturationBoost;
+    return Math.max(22, Math.min(148, Math.round(saturated * darken + range * 0.08)));
+  });
+
+  return {
+    red: boosted[0],
+    green: boosted[1],
+    blue: boosted[2],
+    deepRed: Math.round(boosted[0] * 0.22),
+    deepGreen: Math.round(boosted[1] * 0.22),
+    deepBlue: Math.round(boosted[2] * 0.22)
+  };
 }
 
 function goNext() {
