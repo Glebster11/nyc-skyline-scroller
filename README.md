@@ -32,3 +32,27 @@ const starterPhotos = [
 Keep filenames simple, such as `skyline-01.jpg`, `skyline-02.jpg`, and so on.
 
 The gallery frame is set to a `2 / 3` aspect ratio to match the current portrait skyline photos.
+
+## Align Photos With OpenCV
+
+Install OpenCV:
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+```
+
+Generate aligned web images:
+
+```bash
+python scripts/align_photos.py --reference DSCF8484.jpg
+```
+
+Aligned files are written to:
+
+```text
+assets/aligned-photos/
+```
+
+After reviewing the results, update `script.js` so each image path uses `assets/aligned-photos/` instead of `assets/photos/`.
