@@ -62,8 +62,8 @@ function renderGallery() {
     const caption = document.createElement("p");
     caption.className = "slide-caption";
     caption.innerHTML = `
-      <span class="caption-primary">${photo.date} · ${photo.time}</span>
-      <span class="caption-settings">${photo.temp} · ${photo.iso} · ${photo.aperture} · ${photo.shutter}</span>
+      <span class="caption-primary">${photo.date} · ${photo.time} · ${photo.temp}</span>
+      <span class="caption-settings">${photo.iso} · ${photo.aperture} · ${photo.shutter}</span>
     `;
 
     slide.append(image, caption);
