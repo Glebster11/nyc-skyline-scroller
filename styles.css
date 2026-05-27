@@ -169,8 +169,9 @@ h1 {
   color: rgba(255, 255, 255, 0.84);
   display: grid;
   gap: 4px;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
   font-size: 0.9rem;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .caption-primary,
@@ -181,13 +182,15 @@ h1 {
 .caption-primary {
   color: rgba(255, 255, 255, 0.94);
   font-size: 0.95rem;
+  font-weight: 500;
 }
 
 .caption-settings {
-  color: rgba(255, 255, 255, 0.68);
-  font-size: 0.78rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.82rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
 }
 
 .controls {
@@ -296,7 +299,7 @@ h1 {
   }
 
   .caption-settings {
-    font-size: 0.68rem;
+    font-size: 0.76rem;
   }
 
   .controls {
